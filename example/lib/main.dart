@@ -1,8 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'dart:async';
-
 import 'package:flutter/services.dart';
 import 'package:epub_reader/epub_reader.dart';
+import 'package:path/path.dart';
+import 'package:path_provider/path_provider.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,9 +26,14 @@ class _MyAppState extends State<MyApp> {
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
     String platformVersion;
+    Directory directory = await getTemporaryDirectory();
+    var dbPath = join(directory.path, "AKD.epub");
+    ByteData data = await rootBundle.load("ebook/AKD.epub");
+    List<int> bytes = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+    await File(dbPath).writeAsBytes(bytes);
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      platformVersion = await EpubReader.platformVersion;
+      await EpubReader.openBook(dbPath);
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }

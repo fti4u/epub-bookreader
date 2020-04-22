@@ -10,4 +10,8 @@ class EpubReader {
     final String version = await _channel.invokeMethod('getPlatformVersion');
     return version;
   }
+
+  static Future<void> openBook(String path) async {
+    await _channel.invokeMethod('open_book', {'book_path': path});
+  }
 }

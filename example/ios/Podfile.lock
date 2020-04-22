@@ -1,0 +1,71 @@
+PODS:
+  - AEXML (4.3.3)
+  - epub_reader (0.0.1):
+    - Flutter
+    - FolioReaderKit (~> 1.4)
+  - Flutter (1.0.0)
+  - FolioReaderKit (1.4.0):
+    - AEXML (= 4.3.3)
+    - FontBlaster (= 4.1.0)
+    - MenuItemKit (= 3.1.3)
+    - RealmSwift (= 3.13.1)
+    - SSZipArchive (= 2.1.1)
+    - ZFDragableModalTransition (= 0.6)
+  - FontBlaster (4.1.0)
+  - MenuItemKit (3.1.3)
+  - path_provider (0.0.1):
+    - Flutter
+  - path_provider_macos (0.0.1):
+    - Flutter
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
+  - SSZipArchive (2.1.1)
+  - ZFDragableModalTransition (0.6)
+
+DEPENDENCIES:
+  - epub_reader (from `.symlinks/plugins/epub_reader/ios`)
+  - Flutter (from `Flutter`)
+  - path_provider (from `.symlinks/plugins/path_provider/ios`)
+  - path_provider_macos (from `.symlinks/plugins/path_provider_macos/ios`)
+
+SPEC REPOS:
+  trunk:
+    - AEXML
+    - FolioReaderKit
+    - FontBlaster
+    - MenuItemKit
+    - Realm
+    - RealmSwift
+    - SSZipArchive
+    - ZFDragableModalTransition
+
+EXTERNAL SOURCES:
+  epub_reader:
+    :path: ".symlinks/plugins/epub_reader/ios"
+  Flutter:
+    :path: Flutter
+  path_provider:
+    :path: ".symlinks/plugins/path_provider/ios"
+  path_provider_macos:
+    :path: ".symlinks/plugins/path_provider_macos/ios"
+
+SPEC CHECKSUMS:
+  AEXML: 601f41fcaa7bda7605cad153b0f43db9ec006c0f
+  epub_reader: f247c27fcb20ad14068ca90a15081eea27e4e9fe
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  FolioReaderKit: 0ab8efee766eebd1cdbe88ca7791c7e966cad3be
+  FontBlaster: 127aa66419478d1c62926c7fdb39841633344a45
+  MenuItemKit: 0f850e630b0a3d2bd80fec54db87ce0d2077ada2
+  path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
+  path_provider_macos: f760a3c5b04357c380e2fddb6f9db6f3015897e0
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+  SSZipArchive: 14401ade5f8e82aba1ff03e9f88e9de60937ae60
+  ZFDragableModalTransition: 0d294eaaba6edfcb9839595de765f9ca06a4b524
+
+PODFILE CHECKSUM: 0ba44ad07df4ab62269dc769727cf0f12b1e453d
+
+COCOAPODS: 1.8.4
